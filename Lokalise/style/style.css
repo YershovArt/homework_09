@@ -16,7 +16,7 @@ html {
 
 body {
     font-size: 1rem;
-    line-height: 1;    
+    line-height: 1;
 }
 
 ol,
@@ -24,15 +24,15 @@ ul {
     list-style: none;
 }
 
-/* MAIN */
+/* Header */
 
 .header {
     display: flex;
-    align-items: center;    
+    align-items: center;
     padding: 25px 51px;
     justify-content: space-between;
-    flex-wrap: wrap;   
-    border-bottom: 1px solid #CCCCCC; 
+    flex-wrap: wrap;
+    border-bottom: 1px solid #CCCCCC;
 }
 
 .logo {
@@ -45,7 +45,7 @@ ul {
 }
 
 .menu {
-    display: flex;    
+    display: flex;
 }
 
 .menu__item {
@@ -57,7 +57,7 @@ ul {
 }
 
 .header__btn-wrap {
-    text-align: end;    
+    text-align: end;
 }
 
 .header__btn-transperent {
@@ -65,14 +65,20 @@ ul {
     margin-right: 10px;
     padding: 13px 36px;
     border: 1px solid rgba(0, 0, 0, .5);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 45px;
 }
 
 .header__btn-wrap>.header__btn {
     display: inline-block;
     padding: 13px 22px;
     background-color: #FF6336;
-    border: 1px solid  #FF6336;   
+    border: 1px solid #FF6336;
     color: white;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 45px;
 }
 
 .menu__link,
@@ -80,4 +86,60 @@ ul {
     text-decoration: none;
     color: black;
 }
+
+/* hero */
+
+.container {
+    width: 89.583333333%;
+    margin: 0 auto;
+    outline: 1px solid green;
+}
+.hero__items-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.hero__article {
+    width: 42.480620155%;
+}
+
+
+.hero__title {
+    font-size: 4.063rem;
+    line-height: 70px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.hero__text {
+    font-size: 1.563rem;
+    line-height: 70px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.hero__btn-wrap>.hero__btn {
+    display: inline-block;
+    padding:  22px 41px;
+    background-color: #FF6336;
+    border: 1px solid #FF6336;
+    color: white;
+    margin-right: 10px;
+}
+
+.hero__btn-transperent {
+    display: inline-block;
+    padding: 22px 36px;
+    border: 1px solid rgba(0, 0, 0, .5);
+}
+
+.hero__manual {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.hero__picture-wrap {
+    width:57.364341085%;
+}
+
 
