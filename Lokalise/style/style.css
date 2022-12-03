@@ -29,7 +29,10 @@ ul {
 .header {
     display: flex;
     align-items: center;
-    padding: 25px 51px;
+    /* padding: 25px 51px; */    
+    /* 25÷1440×100 =1,736111111*/
+    /* 51÷1440×100 =2,847222222*/
+    padding: 1.736111111% 2.847222222%;
     justify-content: space-between;
     flex-wrap: wrap;
     border-bottom: 1px solid #CCCCCC;
@@ -37,7 +40,8 @@ ul {
 
 .logo {
     width: 10%;
-    margin-right: 51px;
+    /* 51/1440*100 = 3,541666667 */
+    margin-right: 3.541666667%;
 }
 
 .logo__picture {
@@ -49,13 +53,14 @@ ul {
 }
 
 .menu__item {
-    margin-right: 57px;
+    /* 57/295*100 =  19,322033898*/
+    margin-right: 19.322033898%;
+    white-space: nowrap;
 }
 
 .header__btn-wrap {
     width: 40%;
 }
-
 .header__btn-wrap {
     text-align: end;
 }
@@ -63,7 +68,8 @@ ul {
 .header__btn-transperent {
     display: inline-block;
     margin-right: 10px;
-    padding: 13px 36px;
+    /* padding: 13px 36px; */
+    padding: 0 36px;
     border: 1px solid rgba(0, 0, 0, .5);
     font-weight: 600;
     font-size: 16px;
@@ -72,7 +78,8 @@ ul {
 
 .header__btn-wrap>.header__btn {
     display: inline-block;
-    padding: 13px 22px;
+    /* padding: 13px 22px; */
+    padding: 0 22px;
     background-color: #FF6336;
     border: 1px solid #FF6336;
     color: white;
@@ -196,8 +203,6 @@ ul {
     outline: 2px solid green;
 }
 
-
-
 .contents__description {
     width: 50%;
     outline: 2px solid red;
@@ -247,7 +252,6 @@ ul {
     font-size: 50px;
     line-height: 60px;
     text-align: center;
-
 }
 
 .options__items {
@@ -334,10 +338,11 @@ ul {
 
 .team__picture {
     width: 100%;
+    height: 183px;
 }
 
-.team__picture:first-child {
-    width: 81%;
+.team__picture[alt="managersPicture"] {
+    width: 67%;
 }
 
 .team__titles {
@@ -352,8 +357,46 @@ ul {
     line-height: 30px;
     margin-bottom: 25px;
 }
+
 .team__link {
-font-weight: 400;
-font-size: 20px;
-line-height: 30px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+/* quote */
+
+.quote {
+    background: #C9E8F2;
+}
+
+.quote>.container {
+    padding: 53px 0 105px 0;
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quote__body-wrap {
+    width: 920px;
+}
+
+.quote__text {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.quote__author {
+    margin-top: 23px ;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.quote__foto {
+    width: 100%;
 }
