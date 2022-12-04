@@ -29,7 +29,7 @@ ul {
 .header {
     display: flex;
     align-items: center;
-    /* padding: 25px 51px; */    
+    /* padding: 25px 51px; */
     /* 25÷1440×100 =1,736111111*/
     /* 51÷1440×100 =2,847222222*/
     padding: 1.736111111% 2.847222222%;
@@ -61,6 +61,7 @@ ul {
 .header__btn-wrap {
     width: 40%;
 }
+
 .header__btn-wrap {
     text-align: end;
 }
@@ -391,7 +392,7 @@ ul {
 }
 
 .quote__author {
-    margin-top: 23px ;
+    margin-top: 23px;
     font-weight: 400;
     font-size: 15px;
     line-height: 25px;
@@ -399,4 +400,50 @@ ul {
 
 .quote__foto {
     width: 100%;
+}
+
+/* rewards */
+
+.rewards {
+    background: #DABC98;
+    outline: 2px solid red;
+}
+
+.rewards>.container {
+    padding: 80px 0;
+    outline: 2px solid blue;
+}
+
+.rewards__title {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 50px;
+    width: 481px;
+   
+    outline: 2px solid white;
+}
+
+.rewards__items {
+    display: flex;
+    outline: 2px solid green;
+}
+
+.rewards__logo {
+    display: flex;
+    border-right: 1px solid #000000;
+    width: 809px;
+    justify-content: space-between;
+    outline: 2px solid yellow;
+    align-items: center;
+}
+
+.rewards__item {
+    display: flex;
+    justify-content: space-around;
+    width: 481px;
+    align-items: center;
+}
+
+.rewards__picture {
+    width: 100%;    
 }
