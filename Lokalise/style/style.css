@@ -189,16 +189,25 @@ ul {
     /* Делаю под макет высота строк */
 }
 
+.header__button-wrap {
+    display: flex;
+    justify-content: flex-end;
+    width: 30.055555556%;
+    /* Делаю кнопки */
+}
+
 .header__btn.transperent {
-    padding: 0 36px;
+    padding: 0 10.707816409%;
     line-height: 2.8125;
-    margin-right: 10px;
+    margin-right: 2.974393447%;
+    /* Делаю кнопки */
 }
 
 .header__btn {
-    padding: 0 22px;
+    padding: 0 6.543665583%;
     line-height: 2.8125;
     margin-right: 0;
+    /* Делаю кнопки */
 }
 
 /* hero */
