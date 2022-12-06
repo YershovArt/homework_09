@@ -1,0 +1,223 @@
+/* RESET  CSS*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    border: 0%;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+/* MAIN STYLES */
+
+body {
+    background-color: #940194;
+    /* Цвет фона для body */
+}
+
+.header {
+    border-bottom: 2px solid #940194;
+    /* Цвет для header границы */
+}
+
+.logo,
+.header {
+    display: flex;
+    /* Делаю флекс чтобы расставить обертки в заголовке и лого*/
+    justify-content: space-around;
+    /* Расставил элементы вдоль главной оси */
+    align-items: center;
+    /* Сместил элементы по центру поперечной оси */
+    background-color: #20291F;
+    /* Добавил цвет фона */
+}
+
+[class$="link"]:hover {
+    text-decoration: underline;
+    /* Дал ссылкам подчеркивание при наведении */
+}
+
+.logo {
+    min-width: 20%;
+    /* Минимальная ширина для блока с логотипом и название */
+    width: 20%;
+    /* Ширина для блока с логотипом и название */
+}
+
+.logo__picture-wrap {
+    width: 40%;
+    /* Ширина для обертки к картинки, чтобы все поместилось*/
+}
+
+.logo__picture {
+    min-width: 50%;
+    /* Минимальная ширина для картинки при сужении родительского контейнера */
+    width: 100%;
+    /* Ширина для картинки в родительском контейнере */
+}
+
+.menu-wrap {
+    min-width: 60%;
+    /* Минимальная ширина обертки меню */
+    width: 60%;
+    /* Минимальная обертки меню */
+}
+
+.menu {
+    font-size: 0;
+    /* Перый шаг по убиранию пробелов между li */
+    text-align: center;
+    /* Выравниваем элементы по центру */
+}
+
+.menu__item {
+    display: inline-block;
+    /* Выравниваем элементы в линию */
+    width: 15%;
+    /* Ширина li чтобы хорошо смотрелись надписиси ссылок*/
+    font-size: 1rem;
+    /* Второй шаг по убиранию пробелов между li*/
+    position: relative;
+    /* Так как позиционируем относительно одного из пунктов меню подменю, делаю position relative */
+    margin: 0% 2%;
+    /* Раздвигаем элементы */
+}
+
+.menu__link:hover {
+    background-color: #3fab43;
+    /* Задний фон при наведении меняет цвет*/
+    transition: all .8s;
+    /* Для плавности смены заднего фона при ховере */
+}
+
+.submenu,
+.submenu-two {
+    display: none;
+    /* Делаем подменю видимым только при наведении 1 шаг  */
+}
+
+.spot:checked+.submenu-two,
+.none:checked+.submenu {
+    display: block;
+    /* Делаем подменю видимым только при наведении 2 шаг  */
+    position: absolute;
+    /* ПОзиционируем абсолютно первого родителя с позицией relative  */
+    width: 100%;
+    /* По шрине родителя, чтобы нормально смотрелось */
+    z-index: 10;
+    /* ЧТобы при раскрытии покрывало под собой текст */
+    background: #3fab43;
+    /* Цвет заднего фона для красоты */
+}
+
+.menu__link,
+.submenu__audio {
+    display: inline-block;
+    /* Ссылки блоками, чтобы контролировать ширину и высоту */
+    padding: 5%;
+    /* Оступы чтобы было комфортно заходить и выбирать пункты подменю при наведении */
+    white-space: nowrap;
+    /* Никакого переноса каретки на новую строку */
+    color: #ea0c0c;
+    /* Цвет Шрифта для красоты */
+    transition: all .8s;
+    /* Для плавности смены заднего фона при ховере */
+    width: 100%;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    display: none;
+}
+
+
+.menu__item:hover:nth-child(2) .menu__link::after,
+.menu__item:hover:nth-child(3) .menu__link::after {
+    content: '+';
+    /* Добавляю плюсик, чтобы было похоже на макет */
+    display: inline-block;
+    /* Чтобы шло сразу после ссылки в одной строке  */
+    color: #ea0c0c;
+    /* Цвет плюсика */
+}
+
+.submenu__frame {
+    width: 200%;
+    /*  Ширина карты */
+    height: 200px;
+    /* высота карты */
+}
+
+.submenu__frame-video {
+    display: block;
+    /* чтоб задать ширину и высоту */
+    width: 80%;
+    /* Ширина по родителю  */
+    height: 435px;
+    /* Высота в пикселях по родителю  */
+    margin: 0 auto;
+}
+
+.section__title,
+.article__title {
+    text-align: center;
+    /* Ставлю заголовки по центру */
+    margin: 0% 0% 3%;
+    /* Верхние отступ, нижний отступ */
+}
+
+.section {
+    width: 67%;
+    /* Ширина */
+    margin: 0% auto;
+    /* Позиционируем по центру */
+    outline: 2px solid black;
+    /* Обводка */
+    padding-bottom: 5%;
+    /* Только нижний, чтобы на верхний налазило подменю и было видно, что оно покрывает текст */
+}
+
+.article__item {
+    text-indent: 5%;
+    /* Абзац */
+    line-height: 1.5;
+    /* Межстрочный интервал */
+    margin: 2% auto;
+}
+
+.footer {
+    text-align: center;
+    /* Текст по центру */
+    text-transform: capitalize;
+    /* Первые буквы большие */
+    background-color: #20291F;
+    /* Цвет фона для футера */
+    padding: 3% 0;
+    /* Верхний внутренний отступ */
+    width: 100%;
+    /* Ширина */
+    margin-top: 8%;
+    /* Леплю ко дну */
+}
+
+.footer__item {
+    color: red;
+}
