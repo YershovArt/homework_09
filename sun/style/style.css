@@ -1,0 +1,255 @@
+/* RESET  CSS*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    border: 0%;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+/* MAIN STYLES */
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    /* Делаю контейнер на весь экран */
+}
+
+.wrapper {
+    animation: backgroundColorChange 10s linear;
+    /* Прикручиваю анимацию*/
+    animation-iteration-count: infinite;
+    /* Анимация постоянная */
+}
+
+@keyframes backgroundColorChange {
+    from {
+        background-color: black;
+    }
+
+    to {
+        background-color: blanchedalmond;
+    }
+
+    /* Анимация перехода от одного цвета к другому за 10 секунд параллельно с солнышком */
+}
+
+.sun {
+    width: 200px;
+    /*Ширина для солнышка */
+    height: 200px;
+    /*Высота для солнышка для солнышка */
+    background-color: yellow;
+    /*Задний фон для солнышка */
+    animation: sunRae 10s linear;
+    animation-iteration-count: infinite;
+    /* Прикрутил анимацию сделал ее постоянной */
+    position: absolute;
+    /* Абсолютная позиция для выставления координат в анимации */
+    border: 1px solid yellow;
+    /* Граница */
+    border-radius: 100px;
+    /* Делаю квадрат кругом */
+    transition: all 5s;
+    /* Изменение состояния при наведении и клике */
+    background: url(../picture/kartinka.jpg) no-repeat;
+    background-position: 46% 16%;
+    background-size: 150%;
+    /*Вписал картиночку и спозиционировал ее */
+}
+
+.sun:hover {
+    transform: rotate(360deg);
+    transition: all 5s;
+    /* Крутим солнышко при наведении */
+}
+
+.sun:active {
+    transform: skewX(100deg);
+    transition: all 5s;
+    /* Растягиваем солнышко при клике */
+}
+
+.raitwo {
+    width: 250px;
+    height: 250px;
+    background-color: transparent;
+    animation-iteration-count: infinite;
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    opacity: 1;
+    border: 1px solid yellow;
+    border-radius: 125px;
+    transition: all 5s;
+    /* Прикрутил второй элемент для бордера , типа луч */
+}
+
+.raitwo:hover {
+    border: 10px dashed lightsalmon;
+    transform: rotate(360deg) scale(2, 2);
+    /* При наведе растет лучик*/
+}
+
+
+@keyframes sunRae {
+    /* Анимация для перехода солнца */
+    from {
+        top: 100%;
+        left: 5%;
+    }
+
+    10% {
+        top: 90%;
+        left: 10%;
+    }
+
+    20% {
+        top: 80%;
+        left: 20%;
+    }
+
+    30% {
+        top: 70%;
+        left: 30%;
+    }
+
+    40% {
+        top: 60%;
+        left: 40%;
+    }
+
+    50% {
+        top: 50%;
+        left: 50%;
+    }
+
+    60% {
+        top: 40%;
+        left: 60%;
+    }
+
+    70% {
+        top: 30%;
+        left: 70%;
+    }
+
+    80% {
+        top: 20%;
+        left: 80%;
+    }
+
+    90% {
+        top: 10%;
+        left: 90%;
+    }
+
+    95% {
+        top: 5%;
+        left: 95%;
+
+    }
+
+    to {
+        top: 2%;
+        left: 105%;
+    }
+}
+
+.raione {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    animation: raiOneChange 10s linear;
+    animation-iteration-count: infinite;
+    background: url(../picture/bird_sprite.png);
+    background-position: 3% 69%;
+    /* Картинку с птичкой*/
+}
+
+.raione:hover {
+    background-position: 22% 69%;
+    /* Птичка машет крыльями  при наведении*/
+}
+
+.raione:active {
+    background-position: 41% 69%;
+    /* Птичка машет крыльями  по клику*/
+}
+
+@keyframes raiOneChange {
+    /* Птичка летает по иксу через транслате анимация */
+    from {
+        transform: translate(400%, 90%);
+
+    }
+
+    10% {
+        transform: translate(500%, 90%);
+
+    }
+
+    20% {
+        transform: translate(600%, 90%);
+
+
+    }
+
+    30% {
+        transform: translate(700%, 90%);
+
+    }
+
+    40% {
+        transform: translate(800%, 90%);
+
+    }
+
+    50% {
+        transform: translate(900%, 90%);
+    }
+
+    60% {
+        transform: translate(1000%, 90%);
+    }
+
+    70% {
+        transform: translate(1200%, 90%);
+    }
+
+    80% {
+        transform: translate(1300%, 90%);
+    }
+
+    90% {
+        transform: translate(1400%, 90%);
+    }
+
+    95% {
+        transform: translate(1500%, 90%);
+    }
+
+    to {
+        transform: translate(1600%, 90%);
+        display: none;
+    }
+}
